@@ -10,9 +10,9 @@ http.createServer(function (req, res) {
   // recibimos
     var jugador = JSON.parse(q.jugador);
     if (typeof jugador.nombre === 'string' && 
-       typeof jugador.pos==='object' &&
+       typeof jugador.pos === 'object' &&
        typeof jugador.pos.length === 'number' &&
-       jugador){
+       jugador.pos.length === 2){
     res.end('correcto');
     }else{
     res.end('incorrecto');
